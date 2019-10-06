@@ -1,0 +1,159 @@
+# Rogue Detection Config
+
+# Some important tips:
+
+# Column numbers count starts at 0, not 1
+
+# Filename paths ALWAYS use /, whether on Windows or Linux
+# e.g.  /opt/folder/file.txt
+# e.g.  c:/tools/folder/file.txt
+
+# Color can be either white, black, or grey.
+
+# List all the sources from which you are gathering data
+
+# EXAMPLE
+
+## Number the sources sequencially starting with 0.  The source should be left justified
+# source#
+## Give the source a name, i.e. DHCP, IPAM, ePO, CAM_Tables, etc
+#    name: xxxx
+## Give the location of the file. Note that file path is ALWAYS in linux format.
+#    filename: c:/path/to/file  OR \path\to\file  
+## Give the column number where the MAC address are listed.  Remember, count the columns starting from 0.  This is mandatory as the script tracks rogues by MAC.
+#    MAC_Column: 2
+## Give the column number where the IP is located.  If none, leave blank.
+#    IP_Column: 4
+## Give the column number where the hostname is located.  If none, leave blank
+#    Host_column: 1
+## Give the type of devices that this list contains by color.  Only 1 color allowed.  
+##		white: These are known good devices.  Anything on this list are devices that you have decided are automatically good.
+##		black:  These are known bad devices.  Anything on this list are devices that you have decided will automatically need a response
+##		grey: These are devices that need to be evaluated.
+#    color: white/grey/black
+## Give the weight; that is, how much the fact a MAC address is on this list means if it is rogue or not.  Scale: -10 to 10.
+##		example: -10 means a MAC address on this list is definitely rogue
+##		example:  10 means a MAC address on this list is definitely good
+##		example:  -2 means a MAC on this list increases its chance of being rogue.
+#    weight:  #
+## Set whether or not this source is enabled.  1 for enabled, 0 for disabled.  If disabled, the script will not use that source
+#    enabled: 0
+
+
+source1: 
+  name: McAfee Managed
+  filename:  c:/tools/files/mcafee1.csv
+  MAC_Column: 0
+  IP_Column: 1
+  Host_Column: 2
+  color: white
+  weight: 10
+  enabled: 1
+
+source2: 
+  name: DHCP
+  filename: c:/tools/files/dhcp.csv
+  MAC_Column: 1
+  IP_Column:  0
+  Host_Column: 2
+  color: grey
+  weight: 1
+  enabled: 1
+  
+source3: 
+  name: whitelist
+  filename: c:/tools/files/whitelist.csv
+  MAC_Column: 0
+  IP_Column:  1
+  Host_Column: 2
+  color: white
+  weight: 10
+  enabled: 1
+  
+source4: 
+  name: blacklist
+  filename: c:/tools/files/blacklist.csv
+  MAC_Column: 0
+  IP_Column:  1
+  Host_Column: 2
+  color: black
+  weight: -10
+  enabled: 1
+
+source5: 
+  name: McAfee Exceptions
+  filename:  c:/tools/files/mcafee2.csv
+  MAC_Column: 0
+  IP_Column: 1
+  Host_Column: 2
+  color: white
+  weight: 10
+  enabled: 1
+  
+source6: 
+  name: nmap
+  filename:  c:/tools/files/nmap.csv
+  MAC_Column: 0
+  IP_Column: 1
+  Host_Column: 2
+  color: grey
+  weight: 0
+  enabled: 1
+
+source7: 
+  name: IPAM
+  filename:  c:/tools/files/ipam.csv
+  MAC_Column: 0
+  IP_Column: 1
+  Host_Column: 2
+  color: grey
+  weight: 0
+  enabled: 1
+
+## If you would like to check access to the 
+##    c: drive - win
+##    ssh - ssh  (Future)
+##    snmp - snmp  (Future)
+## 
+## Give the types seperated by commas
+## Give the weight if access is acquired.  
+## Say if this check is enabled or not.
+
+RemoteAccess:
+  types: win
+  weight: 5
+  enabled: 1
+
+
+## This section lists all the ports the script will check to see if they are open.
+## Give the port a name
+## Give the port number
+## Give the weight if the port is open
+
+ports:
+  - appname: Tanium
+    port: 5123
+    weight: 2
+  
+  - appname: AV
+    port: 2222 
+    weight: 2
+
+  - appname: Telnet
+    port: 23
+    weight: -9
+
+  - appname: HTTP
+    port: 80
+    weight: -8
+
+## Give the total score necessary for the script to label an evaluated device as rogue
+Rogue_Score: -5
+
+## Give the total score necessary for the script to label an evaluated device as good
+Good_Score: 3
+
+## Give the type of output and location requested.
+Output:
+  - type: file
+    name: c:/tools/files/results.csv
