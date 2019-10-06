@@ -1,0 +1,39 @@
+MAC,IP,HOST,Alive,McAfee Managed,DHCP,whitelist,blacklist,Tanium,AV,Telnet,HTTP,Remote Access,Manufacturer,Total Weight
+c87b41b0412d,161.165.144.182,com.example.isa,False,False,Y-DHCP,N/A,N/A,N-Tanium,N-AV,N-Telnet,N-HTTP,N/A,unknown,1
+65725f39419a,161.165.144.166,com.example.quentin_carroll,True,N/A,Y-DHCP,N/A,N/A,Y-Tanium,N-AV,Y-Telnet,N-HTTP,RA - True,unknown,-1
+b50f0e85532f,161.165.144.167,com.example.wilmer,False,False,Y-DHCP,N/A,N/A,N-Tanium,N-AV,N-Telnet,N-HTTP,N/A,unknown,1
+a57af025fc98,161.165.144.163,com.example.luis.west,False,False,Y-DHCP,N/A,N/A,N-Tanium,N-AV,N-Telnet,N-HTTP,N/A,unknown,1
+A424DDba8114,161.165.144.174,com.example.anthony.bogan,False,False,Y-DHCP,N/A,N/A,N-Tanium,N-AV,N-Telnet,N-HTTP,N/A,Cambrionix Ltd,1
+de949bca9242,161.165.144.185,com.example.ernie.roob,True,N/A,Y-DHCP,N/A,N/A,N-Tanium,Y-AV,Y-Telnet,N-HTTP,RA - False,unknown,-6
+b3f4863d3ee7,161.165.144.178,com.example.heath,True,N/A,Y-DHCP,N/A,N/A,N-Tanium,N-AV,N-Telnet,N-HTTP,RA - True,unknown,6
+c0eb0b69661f,161.165.144.187,com.example.stefani,True,N/A,Y-DHCP,N/A,N/A,N-Tanium,N-AV,N-Telnet,Y-HTTP,RA - True,unknown,-2
+A424DD4701ea,161.165.144.162,com.example.minnie.powlowski,False,False,Y-DHCP,N/A,N/A,N-Tanium,N-AV,N-Telnet,N-HTTP,N/A,Cambrionix Ltd,1
+614ffc36e7e2,161.165.144.186,com.example.odelia,True,N/A,Y-DHCP,N/A,N/A,N-Tanium,Y-AV,Y-Telnet,N-HTTP,RA - False,unknown,-6
+e832260b7743,161.165.144.179,com.example.jay_cole,False,False,Y-DHCP,N/A,N/A,N-Tanium,N-AV,N-Telnet,N-HTTP,N/A,unknown,1
+84721296eb1b,161.165.144.175,com.example.mose,False,False,Y-DHCP,N/A,N/A,N-Tanium,N-AV,N-Telnet,N-HTTP,N/A,unknown,1
+a3a77642e30a,161.165.144.190,com.example.rigoberto.hane,True,N/A,Y-DHCP,N/A,N/A,Y-Tanium,N-AV,Y-Telnet,N-HTTP,RA - True,unknown,-1
+A424DD7c6971,161.165.144.165,com.example.malik.berge,True,N/A,Y-DHCP,N/A,N/A,N-Tanium,N-AV,Y-Telnet,N-HTTP,RA - False,Cambrionix Ltd,-8
+A424DD4bb640,161.165.144.177,com.example.chet_schaefer,False,False,Y-DHCP,N/A,N/A,N-Tanium,N-AV,N-Telnet,N-HTTP,N/A,Cambrionix Ltd,2
+A424DD4bb640,161.165.144.177,com.example.chet_schaefer,True,N/A,Y-DHCP,N/A,N/A,N-Tanium,Y-AV,Y-Telnet,Y-HTTP,RA - False,Cambrionix Ltd,-13
+A424DD63ff1a,161.165.144.188,com.example.tajuana,False,False,Y-DHCP,N/A,N/A,N-Tanium,N-AV,N-Telnet,N-HTTP,N/A,Cambrionix Ltd,1
+A424DD8fa861,161.165.144.183,com.example.alesia_gottlieb,True,N/A,Y-DHCP,N/A,N/A,Y-Tanium,Y-AV,Y-Telnet,N-HTTP,RA - False,Cambrionix Ltd,-4
+A424DDfcfc55,161.165.144.168,com.example.johana,False,False,Y-DHCP,N/A,N/A,N-Tanium,N-AV,N-Telnet,N-HTTP,N/A,Cambrionix Ltd,1
+A424DD29a566,161.165.144.171,com.example.lucas_heaney,False,False,Y-DHCP,N/A,N/A,N-Tanium,N-AV,N-Telnet,N-HTTP,N/A,Cambrionix Ltd,1
+A424DDd03a93,213.167.182.144,com.example.guy,True,N/A,Y-DHCP,N/A,N/A,Y-Tanium,N-AV,Y-Telnet,N-HTTP,RA - False,Cambrionix Ltd,-6
+A424DDf91422,213.167.182.155,com.example.paul,True,N/A,Y-DHCP,N/A,N/A,Y-Tanium,Y-AV,Y-Telnet,Y-HTTP,RA - False,Cambrionix Ltd,-12
+A424DDc7d12d,213.167.182.153,com.example.belle,False,False,Y-DHCP,N/A,N/A,N-Tanium,N-AV,N-Telnet,N-HTTP,N/A,Cambrionix Ltd,1
+A424DD1f2534,213.167.182.147,com.example.ligia,True,N/A,Y-DHCP,N/A,N/A,N-Tanium,N-AV,N-Telnet,N-HTTP,RA - False,Cambrionix Ltd,1
+A424DD01ccf9,87.90.24.200,com.example.efren.schaden,True,N/A,Y-DHCP,N/A,N/A,Y-Tanium,Y-AV,Y-Telnet,Y-HTTP,RA - False,Cambrionix Ltd,-12
+A424DD111f2b,87.90.24.142,com.example.jasper,True,N/A,Y-DHCP,N/A,N/A,N-Tanium,Y-AV,N-Telnet,N-HTTP,RA - False,Cambrionix Ltd,3
+A424DD378427,87.90.24.132,com.example.james.heller,False,False,Y-DHCP,N/A,N/A,N-Tanium,N-AV,N-Telnet,N-HTTP,N/A,Cambrionix Ltd,1
+A424DD10f26e,87.90.24.9,com.example.moshe,True,N/A,Y-DHCP,N/A,N/A,Y-Tanium,N-AV,N-Telnet,Y-HTTP,RA - True,Cambrionix Ltd,0
+6046738243f2,87.90.24.129,com.example.maire,False,False,Y-DHCP,N/A,N/A,N-Tanium,N-AV,N-Telnet,N-HTTP,N/A,unknown,1
+698bea0f8c46,87.90.24.78,com.example.edmundo_bins,False,False,Y-DHCP,N/A,N/A,N-Tanium,N-AV,N-Telnet,N-HTTP,N/A,unknown,1
+8f3c6208276b,87.90.24.24,com.example.tobias_johnson,False,False,Y-DHCP,N/A,N/A,N-Tanium,N-AV,N-Telnet,N-HTTP,N/A,unknown,1
+cc3f44fad18e,87.90.24.69,com.example.carleen,False,False,Y-DHCP,N/A,N/A,N-Tanium,N-AV,N-Telnet,N-HTTP,N/A,unknown,1
+f0e9d8a99b8d,87.90.24.221,com.example.vina.renner,False,False,Y-DHCP,N/A,N/A,N-Tanium,N-AV,N-Telnet,N-HTTP,N/A,unknown,1
+beb46ba90a34,87.90.24.89,com.example.bette.blick,False,False,Y-DHCP,N/A,N/A,N-Tanium,N-AV,N-Telnet,N-HTTP,N/A,unknown,1
+7aa88463d2d4,87.90.24.216,com.example.laurice,False,False,Y-DHCP,N/A,N/A,N-Tanium,N-AV,N-Telnet,N-HTTP,N/A,unknown,1
+a1c345c175b4,87.90.24.229,com.example.pierre,True,N/A,Y-DHCP,N/A,N/A,N-Tanium,Y-AV,Y-Telnet,N-HTTP,RA - False,unknown,-6
+3fd951f8531f,87.90.24.203,com.example.evonne,True,N/A,Y-DHCP,N/A,N/A,Y-Tanium,Y-AV,N-Telnet,Y-HTTP,RA - False,unknown,-3
+94ba4e0da81b,87.90.24.36,com.example.natasha.streich,False,False,Y-DHCP,N/A,N/A,N-Tanium,N-AV,N-Telnet,N-HTTP,N/A,unknown,1

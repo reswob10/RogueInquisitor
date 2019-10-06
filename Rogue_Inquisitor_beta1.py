@@ -39,7 +39,6 @@ def ping(host):
 
 #
 
-
 def isOpen(ip, port):
 	s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 	s.settimeout(3)
@@ -140,6 +139,7 @@ with open('c:/tools/files/rogue_config.yml') as f:
 				#print(line)
 				getinfo = line.split(',')
 				MAC = getinfo[MAC_C].strip()
+				MAC = re.sub(r':','',MAC)
 				IP = getinfo[IP_C].strip()
 				HOST = getinfo[Host_C].strip()
 				if MAC not in master:
@@ -157,7 +157,8 @@ with open('c:/tools/files/rogue_config.yml') as f:
 				if 'MAC' in line: continue
 				#print(line)
 				getinfo = line.split(',')
-				MAC = getinfo[MAC_C]
+				MAC = getinfo[MAC_C].strip()
+				MAC = re.sub(r':','',MAC)
 				IP = getinfo[IP_C]
 				HOST = getinfo[Host_C]
 				if MAC not in master:
@@ -175,7 +176,8 @@ with open('c:/tools/files/rogue_config.yml') as f:
 				if 'MAC' in line: continue
 				#print(line)
 				getinfo = line.split(',')
-				MAC = getinfo[MAC_C]
+				MAC = getinfo[MAC_C].strip()
+				MAC = re.sub(r':','',MAC)
 				IP = getinfo[IP_C]
 				HOST = getinfo[Host_C]
 				if MAC not in master: 
@@ -224,10 +226,24 @@ for a,b in ra.items():
 
 
 columindex+=1
+columnum[columindex]="Manufacturer" 
+columindex+=1
 columnum[columindex]="Total Weight"
 #columns = columns +',Total Weight'
 
 #print(columnum)
+
+# set up for getting dictionary of oui's to companies
+oui = {}
+
+getoui = open('C:/Tools/files/oui.csv', encoding="utf8")
+
+for line in getoui:
+	if 'Registry' in line: continue
+	#print(str(line))
+	splitline = str(line).split(',')
+	oui[splitline[1]]=splitline[2]
+#
 
 
 print(portcheck)
@@ -378,6 +394,10 @@ for k in grey:
 		print(totalweight)
 		getcolnum = [key for (key, value) in columnum.items() if value=='Total Weight']
 		rowresults[getcolnum[0]]=str(totalweight)
+		getcolnum = [key for (key, value) in columnum.items() if value=='Manufacturer']
+		try: whatoui = oui[MAC[:6]]
+		except KeyError: whatoui = 'unknown'
+		rowresults[getcolnum[0]]=str(whatoui)
 		print('\n\n')
 		print(columnum)
 		lencolumnum = len(columnum)
@@ -387,8 +407,7 @@ for k in grey:
 			if i ==0: outrow = rowresults[i]
 			else:
 				try: outrow = outrow + ',' + rowresults[i]
-				except KeyError:
-					outrow = outrow + ',N/A'
+				except KeyError: outrow = outrow + ',N/A'
 		print(outrow)
 		outdest.write(outrow+'\n')
 		#time.sleep(3)
