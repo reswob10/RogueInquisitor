@@ -16,7 +16,7 @@
 
 ## Number the sources sequencially starting with 0.  The source should be left justified
 # source#
-## Give the source a name, i.e. DHCP, IPAM, ePO, CAM_Tables, etc
+## Give the source a name, i.e. DHCP, IPAM, ePO, etc
 #    name: xxxx
 ## Give the location of the file. Note that file path is ALWAYS in linux format.
 #    filename: c:/path/to/file  OR \path\to\file  
@@ -41,28 +41,28 @@
 
 
 source1: 
-  name: McAfee Managed
-  filename:  c:/tools/files/mcafee1.csv
-  MAC_Column: 0
-  IP_Column: 1
-  Host_Column: 2
+  name: VulnScanner
+  filename:  c:/tools/files/vulnscan.csv
+  MAC_Column: 2
+  IP_Column: 0
+  Host_Column: 1
   color: white
   weight: 10
   enabled: 1
 
 source2: 
-  name: DHCP
-  filename: c:/tools/files/dhcp.csv
-  MAC_Column: 1
-  IP_Column:  0
-  Host_Column: 2
+  name: DHCP    
+  filename: c:/tools/files/testdata/dhcp.csv
+  MAC_Column: 6
+  IP_Column:  4
+  Host_Column: 5
   color: grey
   weight: 1
   enabled: 1
   
 source3: 
   name: whitelist
-  filename: c:/tools/files/whitelist.csv
+  filename: c:/tools/files/testdata/whitelist.csv
   MAC_Column: 0
   IP_Column:  1
   Host_Column: 2
@@ -72,7 +72,7 @@ source3:
   
 source4: 
   name: blacklist
-  filename: c:/tools/files/blacklist.csv
+  filename: c:/tools/files/testdata/blacklist.csv
   MAC_Column: 0
   IP_Column:  1
   Host_Column: 2
@@ -81,8 +81,8 @@ source4:
   enabled: 1
 
 source5: 
-  name: McAfee Exceptions
-  filename:  c:/tools/files/mcafee2.csv
+  name: EDR   
+  filename:  c:/tools/files/testdata/edr.csv
   MAC_Column: 0
   IP_Column: 1
   Host_Column: 2
@@ -98,17 +98,27 @@ source6:
   Host_Column: 2
   color: grey
   weight: 0
-  enabled: 1
+  enabled: 0
 
 source7: 
   name: IPAM
-  filename:  c:/tools/files/ipam.csv
-  MAC_Column: 0
-  IP_Column: 1
-  Host_Column: 2
-  color: grey
+  filename:  c:/tools/files/testdata/ipam.csv
+  MAC_Column: 2
+  IP_Column: 0
+  Host_Column: 1
+  color: white
   weight: 0
   enabled: 1
+
+##
+
+CAM_Table:
+  filename:  c:/tools/files/testdata/cam.csv
+  MAC_Column: 0
+  switch_Column: 1
+  port_Column: 2
+  enabled: 1
+
 
 ## If you would like to check access to the 
 ##    c: drive - win

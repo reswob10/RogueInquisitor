@@ -1,39 +1,51 @@
-MAC,IP,HOST,Alive,McAfee Managed,DHCP,whitelist,blacklist,Tanium,AV,Telnet,HTTP,Remote Access,Manufacturer,Total Weight
-c87b41b0412d,161.165.144.182,com.example.isa,False,False,Y-DHCP,N/A,N/A,N-Tanium,N-AV,N-Telnet,N-HTTP,N/A,unknown,1
-65725f39419a,161.165.144.166,com.example.quentin_carroll,True,N/A,Y-DHCP,N/A,N/A,Y-Tanium,N-AV,Y-Telnet,N-HTTP,RA - True,unknown,-1
-b50f0e85532f,161.165.144.167,com.example.wilmer,False,False,Y-DHCP,N/A,N/A,N-Tanium,N-AV,N-Telnet,N-HTTP,N/A,unknown,1
-a57af025fc98,161.165.144.163,com.example.luis.west,False,False,Y-DHCP,N/A,N/A,N-Tanium,N-AV,N-Telnet,N-HTTP,N/A,unknown,1
-A424DDba8114,161.165.144.174,com.example.anthony.bogan,False,False,Y-DHCP,N/A,N/A,N-Tanium,N-AV,N-Telnet,N-HTTP,N/A,Cambrionix Ltd,1
-de949bca9242,161.165.144.185,com.example.ernie.roob,True,N/A,Y-DHCP,N/A,N/A,N-Tanium,Y-AV,Y-Telnet,N-HTTP,RA - False,unknown,-6
-b3f4863d3ee7,161.165.144.178,com.example.heath,True,N/A,Y-DHCP,N/A,N/A,N-Tanium,N-AV,N-Telnet,N-HTTP,RA - True,unknown,6
-c0eb0b69661f,161.165.144.187,com.example.stefani,True,N/A,Y-DHCP,N/A,N/A,N-Tanium,N-AV,N-Telnet,Y-HTTP,RA - True,unknown,-2
-A424DD4701ea,161.165.144.162,com.example.minnie.powlowski,False,False,Y-DHCP,N/A,N/A,N-Tanium,N-AV,N-Telnet,N-HTTP,N/A,Cambrionix Ltd,1
-614ffc36e7e2,161.165.144.186,com.example.odelia,True,N/A,Y-DHCP,N/A,N/A,N-Tanium,Y-AV,Y-Telnet,N-HTTP,RA - False,unknown,-6
-e832260b7743,161.165.144.179,com.example.jay_cole,False,False,Y-DHCP,N/A,N/A,N-Tanium,N-AV,N-Telnet,N-HTTP,N/A,unknown,1
-84721296eb1b,161.165.144.175,com.example.mose,False,False,Y-DHCP,N/A,N/A,N-Tanium,N-AV,N-Telnet,N-HTTP,N/A,unknown,1
-a3a77642e30a,161.165.144.190,com.example.rigoberto.hane,True,N/A,Y-DHCP,N/A,N/A,Y-Tanium,N-AV,Y-Telnet,N-HTTP,RA - True,unknown,-1
-A424DD7c6971,161.165.144.165,com.example.malik.berge,True,N/A,Y-DHCP,N/A,N/A,N-Tanium,N-AV,Y-Telnet,N-HTTP,RA - False,Cambrionix Ltd,-8
-A424DD4bb640,161.165.144.177,com.example.chet_schaefer,False,False,Y-DHCP,N/A,N/A,N-Tanium,N-AV,N-Telnet,N-HTTP,N/A,Cambrionix Ltd,2
-A424DD4bb640,161.165.144.177,com.example.chet_schaefer,True,N/A,Y-DHCP,N/A,N/A,N-Tanium,Y-AV,Y-Telnet,Y-HTTP,RA - False,Cambrionix Ltd,-13
-A424DD63ff1a,161.165.144.188,com.example.tajuana,False,False,Y-DHCP,N/A,N/A,N-Tanium,N-AV,N-Telnet,N-HTTP,N/A,Cambrionix Ltd,1
-A424DD8fa861,161.165.144.183,com.example.alesia_gottlieb,True,N/A,Y-DHCP,N/A,N/A,Y-Tanium,Y-AV,Y-Telnet,N-HTTP,RA - False,Cambrionix Ltd,-4
-A424DDfcfc55,161.165.144.168,com.example.johana,False,False,Y-DHCP,N/A,N/A,N-Tanium,N-AV,N-Telnet,N-HTTP,N/A,Cambrionix Ltd,1
-A424DD29a566,161.165.144.171,com.example.lucas_heaney,False,False,Y-DHCP,N/A,N/A,N-Tanium,N-AV,N-Telnet,N-HTTP,N/A,Cambrionix Ltd,1
-A424DDd03a93,213.167.182.144,com.example.guy,True,N/A,Y-DHCP,N/A,N/A,Y-Tanium,N-AV,Y-Telnet,N-HTTP,RA - False,Cambrionix Ltd,-6
-A424DDf91422,213.167.182.155,com.example.paul,True,N/A,Y-DHCP,N/A,N/A,Y-Tanium,Y-AV,Y-Telnet,Y-HTTP,RA - False,Cambrionix Ltd,-12
-A424DDc7d12d,213.167.182.153,com.example.belle,False,False,Y-DHCP,N/A,N/A,N-Tanium,N-AV,N-Telnet,N-HTTP,N/A,Cambrionix Ltd,1
-A424DD1f2534,213.167.182.147,com.example.ligia,True,N/A,Y-DHCP,N/A,N/A,N-Tanium,N-AV,N-Telnet,N-HTTP,RA - False,Cambrionix Ltd,1
-A424DD01ccf9,87.90.24.200,com.example.efren.schaden,True,N/A,Y-DHCP,N/A,N/A,Y-Tanium,Y-AV,Y-Telnet,Y-HTTP,RA - False,Cambrionix Ltd,-12
-A424DD111f2b,87.90.24.142,com.example.jasper,True,N/A,Y-DHCP,N/A,N/A,N-Tanium,Y-AV,N-Telnet,N-HTTP,RA - False,Cambrionix Ltd,3
-A424DD378427,87.90.24.132,com.example.james.heller,False,False,Y-DHCP,N/A,N/A,N-Tanium,N-AV,N-Telnet,N-HTTP,N/A,Cambrionix Ltd,1
-A424DD10f26e,87.90.24.9,com.example.moshe,True,N/A,Y-DHCP,N/A,N/A,Y-Tanium,N-AV,N-Telnet,Y-HTTP,RA - True,Cambrionix Ltd,0
-6046738243f2,87.90.24.129,com.example.maire,False,False,Y-DHCP,N/A,N/A,N-Tanium,N-AV,N-Telnet,N-HTTP,N/A,unknown,1
-698bea0f8c46,87.90.24.78,com.example.edmundo_bins,False,False,Y-DHCP,N/A,N/A,N-Tanium,N-AV,N-Telnet,N-HTTP,N/A,unknown,1
-8f3c6208276b,87.90.24.24,com.example.tobias_johnson,False,False,Y-DHCP,N/A,N/A,N-Tanium,N-AV,N-Telnet,N-HTTP,N/A,unknown,1
-cc3f44fad18e,87.90.24.69,com.example.carleen,False,False,Y-DHCP,N/A,N/A,N-Tanium,N-AV,N-Telnet,N-HTTP,N/A,unknown,1
-f0e9d8a99b8d,87.90.24.221,com.example.vina.renner,False,False,Y-DHCP,N/A,N/A,N-Tanium,N-AV,N-Telnet,N-HTTP,N/A,unknown,1
-beb46ba90a34,87.90.24.89,com.example.bette.blick,False,False,Y-DHCP,N/A,N/A,N-Tanium,N-AV,N-Telnet,N-HTTP,N/A,unknown,1
-7aa88463d2d4,87.90.24.216,com.example.laurice,False,False,Y-DHCP,N/A,N/A,N-Tanium,N-AV,N-Telnet,N-HTTP,N/A,unknown,1
-a1c345c175b4,87.90.24.229,com.example.pierre,True,N/A,Y-DHCP,N/A,N/A,N-Tanium,Y-AV,Y-Telnet,N-HTTP,RA - False,unknown,-6
-3fd951f8531f,87.90.24.203,com.example.evonne,True,N/A,Y-DHCP,N/A,N/A,Y-Tanium,Y-AV,N-Telnet,Y-HTTP,RA - False,unknown,-3
-94ba4e0da81b,87.90.24.36,com.example.natasha.streich,False,False,Y-DHCP,N/A,N/A,N-Tanium,N-AV,N-Telnet,N-HTTP,N/A,unknown,1
+MAC,IP,HOST,Alive,DHCP,whitelist,blacklist,EDR,IPAM,Tanium,AV,Telnet,HTTP,Remote Access,Manufacturer,Total Weight,Switch,Switch Port
+1852073dad55,111.212.122.121,MMHUIULEOP.8246798848.com,False,False,N/A,N/A,N/A,N/A,N-Tanium,N-AV,N-Telnet,N-HTTP,N/A,SICHUAN TIANYI COMHEART TELECOMCO.,1,N/A,N/A
+546D5277d916,211.122.121.121,QMIQKCPHHD.8133545731.com,True,Y-DHCP,N/A,N/A,N/A,N/A,Y-Tanium,N-AV,Y-Telnet,Y-HTTP,RA - False,TOPVIEW OPTRONICS CORP.,-14,unknown,unknown
+001AB5a0097e,121.112.121.122,DTUYMBYSSS.3763673991.com,True,Y-DHCP,N/A,N/A,N/A,N/A,Y-Tanium,N-AV,N-Telnet,N-HTTP,RA - True,Home Network System,8,unknown,unknown
+000BB36098e1,212.111.211.212,TXSVSWMLDX.1062776202.com,True,Y-DHCP,N/A,N/A,N/A,N/A,Y-Tanium,N-AV,Y-Telnet,Y-HTTP,RA - False,RiT technologies Ltd.,-14,2.2.2.2,E0/1
+
+4889E78776d8,212.112.211.122,HJVXKOXGTE.6785003720.com,False,False,N/A,N/A,N/A,N/A,N-Tanium,N-AV,N-Telnet,N-HTTP,N/A,Intel Corporate,1,N/A,N/A
+04F021ff08ce,222.112.112.222,TEIMVABKVW.9213358813.com,True,Y-DHCP,N/A,N/A,N/A,N/A,N-Tanium,Y-AV,Y-Telnet,Y-HTTP,RA - False,Compex Systems Pte Ltd,-14,2.2.2.2,E0/1
+
+C8B21Eb1bf17,112.111.211.111,ORHLUHUGAM.5226523201.com,False,False,N/A,N/A,N/A,N/A,N-Tanium,N-AV,N-Telnet,N-HTTP,N/A,CHIPSEA TECHNOLOGIES (SHENZHEN) CORP.,1,N/A,N/A
+0040FF4e0477,221.111.221.112,WQPQCAMQJO.3515158461.com,False,False,N/A,N/A,N/A,N/A,N-Tanium,N-AV,N-Telnet,N-HTTP,N/A,TELEBIT CORPORATION,1,N/A,N/A
+001084fba78a,211.122.221.221,JZMXGMISJK.2862088184.com,False,False,N/A,N/A,N/A,N/A,N-Tanium,N-AV,N-Telnet,N-HTTP,N/A,K-BOT COMMUNICATIONS,1,N/A,N/A
+F46ABCb04276,122.121.122.211,OZXOJRGVHL.2038870955.com,False,False,N/A,N/A,N/A,N/A,N-Tanium,N-AV,N-Telnet,N-HTTP,N/A,Adonit Corp. Ltd.,1,N/A,N/A
+000F5Cd663e7,211.221.222.121,TFVEIFUAIQ.7252539562.com,False,False,N/A,N/A,N/A,N/A,N-Tanium,N-AV,N-Telnet,N-HTTP,N/A,Day One Digital Media Limited,1,N/A,N/A
+D0542Ddeb9e5,212.221.211.111,YVMIVRHBQD.3186480433.com,True,Y-DHCP,N/A,N/A,N/A,N/A,Y-Tanium,Y-AV,Y-Telnet,N-HTTP,RA - False,Cambridge Industries(Group) Co.,-4,1.1.1.1,E0/2
+
+104B462fc234,211.222.121.121,JQEMVHTUFT.3865677495.com,True,Y-DHCP,N/A,N/A,N/A,N/A,N-Tanium,Y-AV,N-Telnet,N-HTTP,RA - False,Mitsubishi Electric Corporation,3,2.2.2.2,E0/1
+
+00802A301357,222.122.112.111,SIVHLKXBZG.0282409244.com,True,Y-DHCP,N/A,N/A,N/A,N/A,N-Tanium,N-AV,Y-Telnet,Y-HTTP,RA - False,TEST SYSTEMS & SIMULATIONS INC,-16,1.1.1.1,E0/2
+
+002174ec312a,212.111.112.121,HFCATHPYDG.7282542499.com,False,False,N/A,N/A,N/A,N/A,N-Tanium,N-AV,N-Telnet,N-HTTP,N/A,AvaLAN Wireless,1,N/A,N/A
+F027459999e7,111.221.111.211,GTYYMBQWYI.0503534237.com,False,False,N/A,N/A,N/A,N/A,N-Tanium,N-AV,N-Telnet,N-HTTP,N/A,F-Secure Corporation,1,N/A,N/A
+88835Dda8258,221.121.222.121,HOMRMXSUHJ.2648280923.com,False,False,N/A,N/A,N/A,N/A,N-Tanium,N-AV,N-Telnet,N-HTTP,N/A,FN-LINK TECHNOLOGY LIMITED,1,N/A,N/A
+001EE44990bf,121.221.222.122,SFVKJATMFL.2551702303.com,False,False,N/A,N/A,N/A,N/A,N-Tanium,N-AV,N-Telnet,N-HTTP,N/A,ACS Solutions France,1,N/A,N/A
+00011Bb4c47f,121.111.122.212,IPUGSUGHFM.2502037866.com,True,Y-DHCP,N/A,N/A,N/A,N/A,N-Tanium,N-AV,N-Telnet,N-HTTP,RA - True,Unizone Technologies,6,1.1.1.1,E0/2
+
+540496e66448,112.222.121.121,TWJZLAXMHI.7752956018.com,False,False,N/A,N/A,N/A,N/A,N-Tanium,N-AV,N-Telnet,N-HTTP,N/A,Gigawave LTD,1,N/A,N/A
+00066B89aded,221.122.122.111,PYBWFJJHBA.4970280374.com,False,False,N/A,N/A,N/A,N/A,N-Tanium,N-AV,N-Telnet,N-HTTP,N/A,Sysmex Corporation,1,N/A,N/A
+587FB79b145d,212.212.122.112,ZVOQWEPOYU.0094619109.com,False,False,N/A,N/A,N/A,N/A,N-Tanium,N-AV,N-Telnet,N-HTTP,N/A,SONAR INDUSTRIAL CO.,1,N/A,N/A
+64B0A6b6ff25,211.122.211.112,ADRLSKHHTI.6114184510.com,True,Y-DHCP,N/A,N/A,N/A,N/A,N-Tanium,Y-AV,N-Telnet,N-HTTP,RA - True,Apple,8,2.2.2.2,E0/1
+
+00232F1b6c19,212.111.112.222,PCHPMCSBGX.1805062377.com,True,Y-DHCP,N/A,N/A,N/A,N/A,Y-Tanium,Y-AV,Y-Telnet,N-HTTP,RA - False,Advanced Card Systems Ltd.,-4,1.1.1.1,E0/2
+
+00C04Be59545,212.212.221.222,PKMSISWIDS.4736848061.com,False,False,N/A,N/A,N/A,N/A,N-Tanium,N-AV,N-Telnet,N-HTTP,N/A,CREATIVE MICROSYSTEMS,1,N/A,N/A
+2CFF65cb1179,111.122.211.121,EIUOKWIFYJ.8319646663.com,False,False,N/A,N/A,N/A,N/A,N-Tanium,N-AV,N-Telnet,N-HTTP,N/A,Oki Electric Industry Co.,1,N/A,N/A
+0006FFfad56c,122.112.111.111,WGEAGJYFDI.3937039645.com,True,Y-DHCP,N/A,N/A,N/A,N/A,Y-Tanium,Y-AV,Y-Telnet,N-HTTP,RA - False,Sheba Systems Co.,-4,2.2.2.2,E0/1
+
+00079F0f728f,122.122.211.222,IMZUGEYXAS.3933956988.com,True,Y-DHCP,N/A,N/A,N/A,N/A,N-Tanium,Y-AV,Y-Telnet,Y-HTTP,RA - False,Action Digital Inc.,-14,2.2.2.2,E0/1
+
+00400479aaaa,211.222.222.212,OYUZOXCOWR.3431336437.com,False,False,N/A,N/A,N/A,N/A,N-Tanium,N-AV,N-Telnet,N-HTTP,N/A,ICM CO. LTD.,1,N/A,N/A
+0080225c3522,222.221.112.122,GVHBQSKJYB.3105435893.com,True,Y-DHCP,N/A,N/A,N/A,N/A,N-Tanium,N-AV,N-Telnet,Y-HTTP,RA - True,SCAN-OPTICS,-2,2.2.2.2,E0/1
+
+A0B6627d0422,112.221.212.212,WOLHGBLDJG.8711256789.com,False,False,N/A,N/A,N/A,N/A,N-Tanium,N-AV,N-Telnet,N-HTTP,N/A,Acutvista Innovation Co.,1,N/A,N/A
+00C0E69ee440,121.222.221.112,ZGBADIAQGH.7601340398.com,False,False,N/A,N/A,N/A,N/A,N-Tanium,N-AV,N-Telnet,N-HTTP,N/A,Verilink Corporation,1,N/A,N/A
+B07FB9aaf29d,211.212.121.121,GQGIBAHWQF.8408398611.com,True,Y-DHCP,N/A,N/A,N/A,N/A,Y-Tanium,Y-AV,Y-Telnet,Y-HTTP,RA - False,NETGEAR,-12,1.1.1.1,E0/2
+
+84DF198701e5,212.211.122.121,SLJTUISEFJ.1434530769.com,True,Y-DHCP,N/A,N/A,N/A,N/A,N-Tanium,N-AV,Y-Telnet,Y-HTTP,RA - True,Chuango Security Technology Corporation,-11,1.1.1.1,E0/2
+
+00504Cff373a,111.211.212.122,BFHSSSCYOA.9574571044.com,False,False,N/A,N/A,N/A,N/A,N-Tanium,N-AV,N-Telnet,N-HTTP,N/A,Galil Motion Control,1,N/A,N/A
+00093756bb88,112.111.121.221,PPJHIYIAJF.0875160062.com,False,False,N/A,N/A,N/A,N/A,N-Tanium,N-AV,N-Telnet,N-HTTP,N/A,Inventec Appliance Corp,1,N/A,N/A
+000E722ca835,221.221.112.212,GASLLCQTGM.3523007223.com,False,False,N/A,N/A,N/A,N/A,N-Tanium,N-AV,N-Telnet,N-HTTP,N/A,CTS electronics,1,N/A,N/A
