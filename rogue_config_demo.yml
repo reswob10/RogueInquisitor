@@ -41,34 +41,75 @@
 
 
 source1: 
-  name: whitelist
-  filename:  c:/rogue/whitelist.csv
-  MAC_Column: 
-  IP_Column: 
-  Host_Column: 
+  name: VulnScanner
+  filename:  c:/tools/files/vulnscan.csv
+  MAC_Column: 2
+  IP_Column: 0
+  Host_Column: 1
   color: white
   weight: 10
-  enabled: 0
+  enabled: 1
 
 source2: 
-  name: blacklist    
-  filename: c:/rogue/blacklist.csv
-  MAC_Column: 
-  IP_Column:  
-  Host_Column: 
-  color: black
-  weight: -10
-  enabled: 0
+  name: DHCP    
+  filename: c:/tools/files/testdata/dhcp.csv
+  MAC_Column: 6
+  IP_Column:  4
+  Host_Column: 5
+  color: grey
+  weight: 1
+  enabled: 1
   
 source3: 
-  name:     
-  filename: c:/rogue/*****.csv
-  MAC_Column: 
-  IP_Column:  
-  Host_Column: 
-  color: 
-  weight: 
+  name: whitelist
+  filename: c:/tools/files/testdata/whitelist.csv
+  MAC_Column: 0
+  IP_Column:  1
+  Host_Column: 2
+  color: white
+  weight: 10
+  enabled: 1
+  
+source4: 
+  name: blacklist
+  filename: c:/tools/files/testdata/blacklist.csv
+  MAC_Column: 0
+  IP_Column:  1
+  Host_Column: 2
+  color: black
+  weight: -10
+  enabled: 1
+
+source5: 
+  name: EDR   
+  filename:  c:/tools/files/testdata/edr.csv
+  MAC_Column: 0
+  IP_Column: 1
+  Host_Column: 2
+  color: white
+  weight: 10
+  enabled: 1
+  
+source6: 
+  name: nmap
+  filename:  c:/tools/files/nmap.csv
+  MAC_Column: 0
+  IP_Column: 1
+  Host_Column: 2
+  color: grey
+  weight: 0
   enabled: 0
+
+source7: 
+  name: IPAM
+  filename:  c:/tools/files/testdata/ipam.csv
+  MAC_Column: 2
+  IP_Column: 0
+  Host_Column: 1
+  color: white
+  weight: 0
+  enabled: 1
+
 ##
 
 CAM_Table:
@@ -89,9 +130,9 @@ CAM_Table:
 ## Say if this check is enabled or not.
 
 RemoteAccess:
-  types: 
-  weight: 
-  enabled: 0
+  types: win
+  weight: 5
+  enabled: 1
 
 
 ## This section lists all the ports the script will check to see if they are open.
@@ -100,23 +141,29 @@ RemoteAccess:
 ## Give the weight if the port is open
 
 ports:
+  - appname: Tanium
+    port: 5123
+    weight: 2
+  
+  - appname: AV
+    port: 2222 
+    weight: 2
+
+  - appname: Telnet
+    port: 23
+    weight: -9
+
   - appname: HTTP
     port: 80
     weight: -8
-    
-  - appname:
-    port:
-    weight:
 
 ## Give the total score necessary for the script to label an evaluated device as rogue
-Rogue_Score: 
+Rogue_Score: -5
 
 ## Give the total score necessary for the script to label an evaluated device as good
-Good_Score: 
+Good_Score: 3
 
 ## Give the type of output and location requested.
-## currently only csv file is supported.  
-## In the future, json and kv files will be supported as well as the ability to send results to other applications.
 Output:
   - type: file
     name: c:/tools/files/results.csv

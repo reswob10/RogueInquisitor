@@ -13,7 +13,7 @@ def cdrive(host):
 	# For testing purposes only
 	return random.choice([True, False])
 
- 
+
 
 def randomstring(stringLength=12):
 	chars = ('abcdef0123456789')
@@ -54,6 +54,26 @@ def isOpen(ip, port):
 	# For testing purposes only
 	return random.choice([True, False])
 
+# Get the local date
+
+getdate = time.strftime("%d%b%Y", time.localtime())
+gettime = time.strftime("%d%b%Y%H%M%S", time.localtime())
+  
+#  Create new log file per day.
+
+logpath = ''
+log = getdate + "-logfilename.txt"
+if not os.path.isfile(log+log):
+	logfile = open(logpath+log, "wb")
+	listalerts = []
+else:
+	listalerts = []
+	getalerts = open(logpath+log, "rb")
+	for line in getalerts:
+		listalerts.append(line.strip())
+	getalerts.close()
+	logfile = open(logpath+log, "ab")
+
 # Here we are definining some variables of lists and dictionaries that we will use throughout the script
 
 # Keep a list of all the sources for devices labeled for each type
@@ -75,11 +95,20 @@ finalresults={}
 columnum = {0:"MAC", 1:"IP", 2:"HOST",3:"Alive"}
 columindex = 3
 
+checkcolor=['white','grey','black']
+
+# check to see if config file exists
+
+if not os.path.isfile('c:/tools/files/rogue_config.yml'): 
+	print('The config file does not exist.  Please provide a proper config file')
+	sys.exit()
 
 
 # this section parses the config yaml file.  Not very efficiently as I'm learning how to do this.
 
 with open('c:/tools/files/rogue_config.yml') as f:
+	logfile.write(timedate + ' Config file opened.')
+	sys.exit()
 	indexnum=0
 	data = yaml.load(f, Loader=yaml.FullLoader)
 	for k,v in data.items():
@@ -110,28 +139,51 @@ with open('c:/tools/files/rogue_config.yml') as f:
 		weight=""
 		for k1, v1 in v.items():
 			print(k1, '-', v1)
-
+			if k1 == "enabled" : enabled=v1
 			if k1 == "name": name = v1
 			if k1 == "filename": file = v1
-			if k1 == "MAC_Column" : MAC_C=v1
-			if k1 == "IP_Column" : IP_C=v1
-			if k1 == "Host_Column" : Host_C=v1
-			if k1 == "color" : color=v1.lower()
+			if k1 == "MAC_Column" : temp1 = v1
+			if temp1 == -1: MAC_C= 'skip'
+			elif v1 > -1: MAC_C = v1
+			else:
+				print('The column given is not in the correct format, please fix your config file.  This source will be disabled and will not be used.')
+				enabled = 0
+			if k1 == "IP_Column" : temp1=v1
+			if temp1 == -1: IP_C= 'skip'
+			elif v1 > -1: IP_C = v1
+			else:
+				print('The column given is not in the correct format, please fix your config file.  This source will be disabled and will not be used.')
+				enabled = 0
+			if k1 == "Host_Column" : temp1=v1
+			if temp1 == -1: Host_C= 'skip'
+			elif v1 > -1: Host_C = v1
+			else:
+				print('The column given is not in the correct format, please fix your config file. Script will include this source, but will not use hostname')
+				Host_C = 'skip'
+			if k1 == "color" : temp1 = v1.lower()
+			if temp1 not in checkcolor:
+				print('please provide a color of white, grey, OR black')
+				logfile.write(timedate + ": " + temp1 + " is not a valid color.")
+				enabled=0
+			else: color=v1.lower()
+			
 			if k1 == "weight" : weight=v1
-			if k1 == "enabled" : enabled=v1
 
 		# check to see if this source is enabled.  if not, skip
 		if enabled == 0:
-			print("This source is disabled, skipping\n")
+			print(name + "-  This source is disabled, skipping\n")
+			logfile.write(timedate + ": " + name + "-  This source is disabled, skipping\n")
 			continue
-		print('\nnow have info\n')
+		#if args.vlevel > 2: print('All preliminary information has now been collected.\n')
 		# try to open the file with the MAC and other information
-		try: testopen = open(file, 'r')
+		try: 
+			testopen = open(file, 'r')
+			logfile.write(timedate + ": " + name + "-  This source is enabled and the file opened")
 		except:
 			print("Could not open file for " + file + ".  Please verify file exists.  Will skip this file\n")
+			logfile.write(timedate + ": The file for source "+name+" could not be opened.  Please check that the file " + file + " exists.")
 			#time.sleep(3)
 			continue
-		print(name)
 		columindex +=1
 		columnum[columindex]=name
 		#columns = columns + ',' + name
@@ -142,9 +194,12 @@ with open('c:/tools/files/rogue_config.yml') as f:
 				#print(line)
 				getinfo = line.split(',')
 				MAC = getinfo[MAC_C].strip()
-				MAC = re.sub(r':','',MAC)
-				IP = getinfo[IP_C].strip()
-				HOST = getinfo[Host_C].strip()
+				if MAC != 'skip':
+					MAC = re.sub(r':','',MAC)
+				if IP != 'skip':
+					IP = getinfo[IP_C].strip()
+				if HOST != 'skip':
+					HOST = getinfo[Host_C].strip()
 				if MAC not in master:
 					grey[str(indexnum)]=name+','+MAC+','+IP+','+HOST+','+str(weight)
 					master[MAC] = str(indexnum)
@@ -196,14 +251,14 @@ with open('c:/tools/files/rogue_config.yml') as f:
 			print("Your color: " + color + " is an invalid color. Skipping this source.")
 			continue
 
-print("This is the master list: \n ")
-print(master)
-print("\nThis is the grey list: \n")
-print(grey)
-print("\nThis is the white list: \n")
-print(white)
-print("\nThis is the black list: \n")
-print(black)
+# print("This is the master list: \n ")
+# print(master)
+# print("\nThis is the grey list: \n")
+# print(grey)
+# print("\nThis is the white list: \n")
+# print(white)
+# print("\nThis is the black list: \n")
+# print(black)
 
 for y in portcheck:
 	for a, b in y.items():
@@ -257,7 +312,12 @@ except NameError:
 if skipcam == 0:
 	for a,b in caminfo.items():
 		if a=='filename':camfile = b
-		if a=='MAC_Column':MAC_C = b
+		if a=='MAC_Column':
+			if b == -1: MAC_C= 'skip'
+			if b > -1: MAC_C = b
+			else:
+				print('The column given is not correct, please fix your config file')
+				enabled = 0
 		if a=='switch_Column':switch_C = b
 		if a=='port_Column': port_C=b
 		if a=='enabled': camcheck=b
@@ -456,7 +516,7 @@ for k in grey:
 				except KeyError: outrow = outrow + ',N/A'
 		print('\nThis is the outrow\n'+outrow)
 		outdest.write(outrow+'\n')
-		#time.sleep(2)
+		# time.sleep(2)
 		if totalweight > goodscore:
 			print('This MAC had been determined to be good and will be added to good list')
 			
