@@ -6,12 +6,12 @@ import random, string, argparse
 # Here we define some functions we will use during analysis of IPs
 
 def cdrive(host):
-	# command = 'net use m: \\\\' + host + '\c$'
-	# if args.vlevel > 1:print(command)
-	# return subprocess.call(command) == 0
+	command = 'net use m: \\\\' + host + '\c$'
+	#if args.vlevel > 1:print(command)
+	return subprocess.call(command) == 0
 	
 	# For testing purposes only
-	return random.choice([True, False])
+	#return random.choice([True, False])
 
 
 
@@ -28,31 +28,31 @@ def ping(host):
 	Remember that a host may not respond to a ping (ICMP) request even if the host name is valid.
 	"""
 	# Option for the number of packets as a function of
-	#param = '-n' if os.system().lower()=='windows' else '-c'
+	param = '-n' if os.system().lower()=='windows' else '-c'
 
 	# Building the command. Ex: "ping -c 1 google.com"
-	# command = ['ping', '-n', '1', host]
-	# return subprocess.call(command) == 0
+	command = ['ping', '-n', '1', host]
+	return subprocess.call(command) == 0
 	
 	#For testing purposes only
-	return random.choice([True, False])
+	# return random.choice([True, False])
 
 #
 
 def isOpen(ip, port):
 	s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 	s.settimeout(3)
-	# try:
-		# s.connect((ip, int(port)))
-		# s.shutdown(socket.SHUT_RDWR)
-		# return True
-	# except:
-		# return False
-	# finally:
-		# s.close()
+	try:
+		s.connect((ip, int(port)))
+		s.shutdown(socket.SHUT_RDWR)
+		return True
+	except:
+		return False
+	finally:
+		s.close()
 		
 	# For testing purposes only
-	return random.choice([True, False])
+	# return random.choice([True, False])
 
 # Get the local date
 
